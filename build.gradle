@@ -23,10 +23,6 @@ repositories {
     }
 
     maven {
-        name = "Jared's maven"
-        url = "https://maven.blamejared.com/"
-    }
-    maven {
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
@@ -75,8 +71,8 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
 
-    //JEI
-    implementation("mezz.jei:jei-${jei_mc_version}-neoforge:${jei_version}")
+    //EMI (dev runtime only; fleet policy: EMI is the only recipe viewer, built locally into mavenLocal)
+    runtimeOnly("dev.emi:emi-neoforge:${emi_version}")
     //Construction Sticks
     implementation("curse.maven:construction-sticks-1156098:${construction_sticks}")
     //AE2
